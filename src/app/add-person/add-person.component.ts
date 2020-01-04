@@ -8,7 +8,8 @@ import {Person, IPerson} from '../Person/iperson';
   styleUrls: ['./add-person.component.css'],
 })
 export class AddPersonComponent implements OnInit {
- person: Person;
+ // person: Person;
+ person: IPerson;
   constructor(private personService: PersonService) { }
 
   ngOnInit() {
@@ -18,7 +19,8 @@ export class AddPersonComponent implements OnInit {
   onClick(): void {
     // this.personService.persons.emit(this.personData);
 
-    this.personService.persons.next(this.person);
-    this.person = {} as IPerson;
+  //  this.personService.persons.next(this.person);
+   this.personService.addPerson(this.person);
+   this.person = {} as IPerson;
   }
 }
