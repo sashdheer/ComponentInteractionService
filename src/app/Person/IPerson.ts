@@ -1,16 +1,18 @@
 export interface IPerson {
-  firstName: String;
-  lastName: String;
-  socialSecurityNumber: Number;
-  address: String;
-  city: String;
-  zipCode: Number;
+  name: string;
+  height: string;
+  mass: string;
+  hair_color: string;
+  skin_color: string;
+  eye_color: string;
+  birth_year: string;
+  gender: string;
+  homeworld: string;
+  created: string;
+  edited: string;
+  url: string;
+  films: string[];
+  species: string[];
+  vehicles: string[];
+  starships: string[];
 }
-
-export class Person implements IPerson {
-
-  constructor(public firstName: String, public lastName: String,
-        public socialSecurityNumber: Number,public address: String, public city: String, public zipCode: Number) {}
-
-}
-

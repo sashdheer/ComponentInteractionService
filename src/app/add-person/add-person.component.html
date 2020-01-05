@@ -1,27 +1,23 @@
 <div class="form-vertical">
   <div class="form-group">
     <label for="pFirstName">First Name</label>
-    <input type="text" id="pFirstName" name="pFirstName" [(ngModel)]="person.firstName" class="form-control">
+    <input type="text" id="pFirstName" name="pFirstName" [(ngModel)]="person.name" class="form-control">
   </div>
   <div class="form-group">
     <label for="pLastName" class="control-label">Last Name</label>
-    <input type="text" id="pLastName" name="pLastName" [(ngModel)]="person.lastName" class="form-control">
+    <input type="text" id="pLastName" name="pLastName" [(ngModel)]="person.height" class="form-control">
   </div>
   <div class="form-group">
     <label for="pSSN" class="control-label">Social Security Number</label>
-    <input type="text" id="pSSN" name="pSSN" [(ngModel)]="person.socialSecurityNumber" class="form-control">
+    <input type="text" id="pSSN" name="pSSN" [(ngModel)]="person.mass" class="form-control">
   </div>
   <div class="form-group">
     <label for="pAddress" class="control-label">Address </label>
-   <input type="text" id="pAddress" name="pAddress" [(ngModel)]="person.address" class="form-control">
+   <input type="text" id="pAddress" name="pAddress" [(ngModel)]="person.birth_year" class="form-control">
   </div>
   <div class="form-group">
     <label for="pCity" class="control-label">City</label>
-   <input type="text" id="pCity" name="pCity" [(ngModel)]="person.city" class="form-control">
-  </div>
-  <div class="form-group">
-    <label for="pZipCode" class="control-label">Zip Code</label>
-    <input type="text" id="pZipCode" name="pZipCode" [(ngModel)]="person.zipCode" class="form-control">
+   <input type="text" id="pCity" name="pCity" [(ngModel)]="person.gender" class="form-control">
   </div>
   <div class="form-group">
     <button id="addPerson" class="btn btn-primary" (click)="onClick()">Add Person</button>
