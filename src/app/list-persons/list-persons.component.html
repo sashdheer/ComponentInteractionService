@@ -1,4 +1,4 @@
 <ul *ngFor="let person of personList">
-  <li>{{person.firstName}} {{person.lastName}} {{person.socialSecurityNumber}} {{person.address}} {{person.city}} {{person.zipCode}}</li>
+  <li (click) = "onRemove(person)">{{person.firstName}} {{person.lastName}} {{person.socialSecurityNumber}} {{person.address}} {{person.city}} {{person.zipCode}}</li>
 </ul>
 

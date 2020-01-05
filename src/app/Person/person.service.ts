@@ -6,12 +6,20 @@ import { Person, IPerson } from './iperson';
   providedIn: 'root'
 })
 export class PersonService {
+   personListChange = new Subject<IPerson[]>();
    personList: IPerson[] = [];
   constructor() { }
 
-  // persons = new EventEmitter();
- // persons = new Subject(); // This is a diffent way of emitting
   addPerson(person: IPerson) {
     this.personList.push(person);
+    // Notifie that the list has been changed to inform changes. Otherwise. you wouldn't get updates.
+    this.personListChange.next(this.personList);
+  }
+
+  removePerson(person: IPerson) {
+    this.personList = this.personList.filter(dude => {
+      return dude !== person;
+    });
+    this.personListChange.next(this.personList);
   }
 }
