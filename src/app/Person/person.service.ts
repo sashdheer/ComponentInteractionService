@@ -1,6 +1,6 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { Subject } from 'rxjs';
-import { Person, IPerson } from './iperson';
+import { IPerson } from './iperson';
 import {HttpClient} from '@angular/common/http';
 import {map, filter} from 'rxjs/operators';
 

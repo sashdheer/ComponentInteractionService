@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 })
 export class ListPersonsComponent implements OnInit, OnDestroy {
  personList: IPerson[];
+ isLoading = false;
  private personListSubscription: Subscription;
   constructor(private personService: PersonService) { }
 
@@ -18,8 +19,10 @@ export class ListPersonsComponent implements OnInit, OnDestroy {
     // Listen for changes.
     this.personListSubscription = this.personService.personListChange.subscribe(persons => {
       this.personList = persons;
+      this.isLoading = false;
     });
 
+    this.isLoading = true;
     this.personService.fetchPersons();
     }
 

@@ -1,4 +1,7 @@
-<ul *ngFor="let person of personList">
-  <li (click) = "onRemove(person)">{{person.name}} {{person.height}} {{person.mass}} {{person.birth_year}} {{person.gender}} </li>
-</ul>
+<p *ngIf="isLoading">Loading Data...</p>
+<div *ngIf="!isLoading">
+  <ul   *ngFor="let person of personList">
+    <li (click) = "onRemove(person)">{{person.name}} {{person.height}} {{person.mass}} {{person.birth_year}} {{person.gender}} </li>
+  </ul>
+</div>
 
